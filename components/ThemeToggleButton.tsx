@@ -3,12 +3,17 @@ import { useTheme } from "@/src/hooks/useTheme";
 
 export default function ThemeToggleButton() {
   const { theme, toggleTheme } = useTheme();
+
   return (
-    <div className="fixed">
+    <div>
       <button
         type="button"
         onClick={toggleTheme}
-        className="hs-dark-mode font-medium text-gray-800 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200"
+        className={`font-medium text-foreground rounded-full hover:bg-background focus:outline-none focus:bg-background ${
+          theme === "dark"
+            ? "bg-background text-foreground"
+            : "bg-background text-foreground"
+        }`}
       >
         <span className="group inline-flex shrink-0 justify-center items-center size-9">
           {theme === "dark" ? (
