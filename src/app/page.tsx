@@ -4,12 +4,6 @@ export default function Home() {
       <h1 className="text-4xl font-bold text-blue-600">
         ¡Hola, AM Sound GT! 🎵
       </h1>
-      <div>
-        <p className="text-lg">
-          Artículos y accesorios musicales de las mejores marcas al mejor
-          precio.
-        </p>
-      </div>
     </main>
   );
 }
