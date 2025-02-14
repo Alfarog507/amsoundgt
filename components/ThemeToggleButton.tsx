@@ -6,19 +6,10 @@ export default function ThemeToggleButton() {
 
   return (
     <div>
-      <button
-        type="button"
-        onClick={toggleTheme}
-        className={`font-medium text-foreground rounded-full hover:bg-background focus:outline-none focus:bg-background ${
-          theme === "dark"
-            ? "bg-background text-foreground"
-            : "bg-background text-foreground"
-        }`}
-      >
-        <span className="group inline-flex shrink-0 justify-center items-center size-9">
+      <button type="button" onClick={toggleTheme}>
+        <span>
           {theme === "dark" ? (
             <svg
-              className="shrink-0 size-4"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -41,7 +32,6 @@ export default function ThemeToggleButton() {
             </svg>
           ) : (
             <svg
-              className="shrink-0 size-4"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
