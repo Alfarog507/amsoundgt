@@ -49,7 +49,7 @@ export default function Nav({ openNav }: NavProps) {
     >
       <div className="flex items-center h-full justify-between w-[90%] xl:w-[80%] mx-auto">
         <h1 className="text-xl md:text-2xl font-bold">
-          <span className="text-3xl pr-2 md:text-4xl text-blue-800">AM</span>
+          <span className="text-2xl pr-2 md:text-3xl text-blue-800">AM</span>
           Sound GT
         </h1>
         <nav className="hidden md:flex items-center space-x-10">
