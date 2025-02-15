@@ -1,63 +1,64 @@
 import React from "react";
-
-// Datos de ejemplo (luego podemos conectarlo con una API)
-const products = [
-  {
-    id: 1,
-    name: "Guitarra Acústica Yamaha",
-    price: "Q1,500.00",
-    image: "/images/guitarra.jpg",
-  },
-  {
-    id: 2,
-    name: "Teclado Casio CT-X700",
-    price: "Q2,200.00",
-    image: "/images/teclado.jpg",
-  },
-  {
-    id: 3,
-    name: "Micrófono Shure SM58",
-    price: "Q750.00",
-    image: "/images/microfono.jpg",
-  },
-];
+import { products } from "@/constant/Constant";
 
 export default function Catalog() {
   return (
-    <section id="catalog" className="py-12 bg-gray-100 dark:bg-gray-900">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">
-          Catálogo de Productos
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {products.map((product) => (
-            <div
-              key={product.id}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden"
-            >
+    <section className="flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-900">
+      {/* Contenedor que abarca todo el ancho */}
+      <div className="w-full max-w-7xl flex flex-col md:flex-row gap-8 px-12">
+        {/* Sección izquierda: HOT SALE + Producto Destacado */}
+        <div className="flex-1">
+          <h2 className="text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            HOT SALE
+          </h2>
+          <div className="relative">
+            <img
+              src={products[0].image}
+              alt={products[0].name}
+              className="w-full object-cover"
+            />
+            <div className="absolute bottom-4 left-2 right-2 bg-gray-900 text-white px-4 py-2">
+              <p className="text-lg font-bold">{products[0].price}</p>
+              <p className="text-base">{products[0].name}</p>
+              <p className="leading-relaxed text-sm">
+                {products[0].description}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Sección derecha: Lista de productos */}
+        <div className="flex-1 flex flex-col justify-center gap-12">
+          {products.slice(1).map((product) => (
+            <div key={product.id} className="flex items-center gap-6">
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-48 object-cover"
+                className="w-32 h-32 object-cover"
               />
-              <div className="p-4">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                  {product.name}
-                </h3>
-                <p className="text-gray-700 dark:text-gray-300">
+              <div>
+                <p className="text-2xl font-bold text-gray-900 dark:text-white">
                   {product.price}
                 </p>
-                <a
-                  href="https://www.instagram.com/amsound.gt/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 w-full block text-center bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition"
-                >
-                  Comprar en Instagram
-                </a>
+                <p className="text-lg text-gray-700 dark:text-gray-300">
+                  {product.name}
+                </p>
+                <p className="text-md text-gray-500 dark:text-gray-400">
+                  {product.description}
+                </p>
               </div>
             </div>
           ))}
+          <div className="flex justify-center mt-8">
+            <a
+              href="https://www.instagram.com/amsound.gt/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-500 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-600"
+            >
+              Visita nuestra tienda en Instagram
+            </a>
+          </div>
         </div>
       </div>
     </section>
