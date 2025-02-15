@@ -2,22 +2,22 @@ export const navLinks = [
   {
     id: 1,
     title: "Inicio",
-    url: "/",
+    url: "#home",
   },
   {
     id: 2,
     title: "Catalogo",
-    url: "/catalog",
+    url: "#catalog",
   },
   {
     id: 3,
     title: "Testimonios",
-    url: "/testimonials",
+    url: "#testimonials",
   },
   {
     id: 4,
     title: "Contacto",
-    url: "/contact",
+    url: "#contacto",
   },
 ];
 
@@ -53,5 +53,32 @@ export const products = [
     image: "/images/almohadillas.jpg",
     description:
       "¿Buscas comodidad y un mejor aislamiento de sonido para tus audífonos? Ten el accesorio perfecto para llevar tu experiencia auditiva al siguiente nivel.",
+  },
+];
+
+export const reviews = [
+  {
+    name: "Carlos M.",
+    text: "Excelente calidad y servicio. Recomendado!",
+    rating: 5,
+    image: "/images/u.jpg",
+  },
+  {
+    name: "Ana P.",
+    text: "Compré una guitarra y llegó súper rápido.",
+    rating: 4,
+    image: "/images/u.jpg",
+  },
+  {
+    name: "Pedro G.",
+    text: "El mejor lugar para comprar instrumentos musicales.",
+    rating: 5,
+    image: "/images/u.jpg",
+  },
+  {
+    name: "Laura S.",
+    text: "Gran variedad de productos y excelente atención.",
+    rating: 5,
+    image: "/images/u.jpg",
   },
 ];

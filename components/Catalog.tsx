@@ -3,7 +3,10 @@ import { products } from "@/constant/Constant";
 
 export default function Catalog() {
   return (
-    <section className="flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-900">
+    <section
+      id="catalog"
+      className="flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-900"
+    >
       {/* Contenedor que abarca todo el ancho */}
       <div className="w-full max-w-7xl flex flex-col md:flex-row gap-8 px-12">
         {/* Sección izquierda: HOT SALE + Producto Destacado */}

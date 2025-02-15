@@ -2,7 +2,10 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <section className="relative flex items-center h-screen bg-background text-foreground px-8">
+    <section
+      id="home"
+      className="relative flex items-center h-screen bg-background text-foreground px-8"
+    >
       {/* Imagen de fondo más grande */}
       <div
         className="absolute top-0 right-0 w-1/2 h-full bg-cover bg-center opacity-50"
@@ -22,10 +25,10 @@ export default function Hero() {
         {/* Botón interactivo */}
         <div className="mt-6">
           <a
-            href="#explore"
+            href="#contacto"
             className="inline-block px-6 py-3 text-lg font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition"
           >
-            Explorar →
+            Contacto
           </a>
         </div>
       </div>
