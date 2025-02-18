@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { navLinks } from "@/constant/Constant";
-import ThemeToggleButton from "../ThemeToggleButton";
+import ThemeToggleButton from "../ThemeButton/ThemeToggleButton";
 import { useTheme } from "@/src/hooks/useTheme";
 
 type NavProps = {
