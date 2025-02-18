@@ -1,16 +1,21 @@
 import React from "react";
 import styles from "./Hero.module.css";
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <section id="home" className={styles.hero} aria-labelledby="hero-heading">
       {/* Imagen de fondo más grande */}
-      <div
-        className="absolute top-0 right-0 w-1/2 h-full bg-cover bg-center opacity-50"
-        style={{ backgroundImage: "url('/images/Hero.webp')" }}
-        role="img"
-        aria-label="Imagen de fondo de AM Sound GT"
-      ></div>
+      <div className="absolute top-0 right-0 w-1/2 h-full opacity-50">
+        <Image
+          src="/images/Hero.webp"
+          alt="Imagen de fondo de AM Sound GT"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          className={styles.hero__image}
+        />
+      </div>
 
       {/* Contenido Principal más a la izquierda */}
       <div className={styles.hero__content}>

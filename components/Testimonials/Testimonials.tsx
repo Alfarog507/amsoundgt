@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaStar } from "react-icons/fa";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import Image from "next/image";
 import { reviews } from "@/constant/Constant";
 
 export default function Testimonials() {
@@ -50,9 +51,11 @@ export default function Testimonials() {
             >
               {/* Imagen del usuario */}
               <div className="flex justify-center mb-4">
-                <img
+                <Image
                   src={reviews[current].image}
                   alt={reviews[current].name}
+                  width={80}
+                  height={80}
                   className="w-20 h-20 rounded-full object-cover border-4 border-gray-200 dark:border-gray-700"
                 />
               </div>

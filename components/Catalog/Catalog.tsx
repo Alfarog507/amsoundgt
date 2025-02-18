@@ -1,5 +1,6 @@
 import React from "react";
 import { products } from "@/constant/Constant";
+import Image from "next/image";
 
 export default function Catalog() {
   return (
@@ -15,9 +16,12 @@ export default function Catalog() {
             HOT SALE
           </h2>
           <div className="relative">
-            <img
+            <Image
               src={products[0].image}
               alt={products[0].name}
+              layout="responsive"
+              width={700}
+              height={475}
               className="w-full object-cover"
             />
             <div className="absolute bottom-4 left-2 right-2 bg-gray-900 text-white px-4 py-2">
@@ -34,9 +38,11 @@ export default function Catalog() {
         <div className="flex-1 flex flex-col justify-center gap-12">
           {products.slice(1).map((product) => (
             <div key={product.id} className="flex items-center gap-6">
-              <img
+              <Image
                 src={product.image}
                 alt={product.name}
+                width={128}
+                height={128}
                 className="w-32 h-32 object-cover"
               />
               <div>
