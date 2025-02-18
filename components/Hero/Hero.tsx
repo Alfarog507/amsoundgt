@@ -8,7 +8,7 @@ export default function Hero() {
       {/* Imagen de fondo más grande */}
       <div className="absolute top-0 right-0 w-1/2 h-full opacity-50">
         <Image
-          src="/images/Hero..jpg"
+          src="/images/Hero.jpg"
           alt="Imagen de fondo de AM Sound GT"
           layout="fill"
           objectFit="cover"
