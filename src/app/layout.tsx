@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "@/styles/globals.css";
 import Head from "next/head";
+import ErrorBoundary from "@/components/ErrorBoundary/ErrorBoundary";
 
 const font = Poppins({
   weight: ["100", "300", "400", "500", "600", "700", "200", "900", "800"],
@@ -43,7 +44,9 @@ export default function RootLayout({
         <meta name="twitter:image" content="/images/og-image.jpg" />
         <title>AM Sound GT</title>
       </Head>
-      <body className={`${font.className} antialiased`}>{children}</body>
+      <body className={`${font.className} antialiased`}>
+        <ErrorBoundary>{children}</ErrorBoundary>
+      </body>
     </html>
   );
 }
