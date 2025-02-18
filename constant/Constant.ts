@@ -1,4 +1,6 @@
-export const navLinks = [
+import { NavLink, Product, Review } from "@/types/index";
+
+export const navLinks: NavLink[] = [
   {
     id: 1,
     title: "Inicio",
@@ -21,7 +23,7 @@ export const navLinks = [
   },
 ];
 
-export const products = [
+export const products: Product[] = [
   {
     id: 1,
     name: "KZ EDX PRO X",
@@ -56,7 +58,7 @@ export const products = [
   },
 ];
 
-export const reviews = [
+export const reviews: Review[] = [
   {
     name: "Carlos M.",
     text: "Excelente calidad y servicio. Recomendado!",
