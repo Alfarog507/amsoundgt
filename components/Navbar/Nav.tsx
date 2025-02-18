@@ -52,7 +52,10 @@ export default function Nav({ openNav }: NavProps) {
           <span className="text-2xl pr-2 md:text-3xl text-blue-800">AM</span>
           Sound GT
         </h1>
-        <nav className="hidden md:flex items-center space-x-10">
+        <nav
+          aria-label="Main Navigation"
+          className="hidden md:flex items-center space-x-10"
+        >
           {navLinks.map((link) => (
             <Link key={link.id} href={link.url}>
               <p className="nav__link">{link.title}</p>

@@ -5,11 +5,13 @@ export default function Hero() {
     <section
       id="home"
       className="relative flex items-center h-screen bg-background text-foreground px-8"
+      aria-labelledby="hero-heading"
     >
       {/* Imagen de fondo más grande */}
       <div
         className="absolute top-0 right-0 w-1/2 h-full bg-cover bg-center opacity-50"
         style={{ backgroundImage: "url('/images/Hero.webp')" }}
+        aria-label="Imagen de fondo de AM Sound GT"
       ></div>
 
       {/* Contenido Principal más a la izquierda */}
@@ -27,6 +29,7 @@ export default function Hero() {
           <a
             href="#contacto"
             className="inline-block px-6 py-3 text-lg font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition"
+            aria-label="Ir a la sección de contacto"
           >
             Contacto
           </a>
